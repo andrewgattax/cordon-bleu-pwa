@@ -1,0 +1,17 @@
+<header class="navbar">
+  <div class="element">
+    <a routerLink="/ordini">
+      <mat-icon style="font-size: 40px">clear_all</mat-icon>
+    </a>
+  </div>
+  <div class="element principal">
+    <div class="circle">
+      <div class="inner-circle" [ngClass]="{disabled : !available()}">
+      <mat-icon fontSet="material-icons-outlined">payments</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="element">
+      <mat-icon (click)="logout()">logout</mat-icon>
+  </div>
+</header>

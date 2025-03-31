@@ -1,5 +1,13 @@
-<div class="container">
-  <mat-icon fontSet="material-icons-outlined">{{icon()}}</mat-icon>
-  <input type="{{type()}}" id="input" placeholder="{{label()}}">
+<div class="container" [ngClass]="{invalid : invalid(), focused : focused()}">
+  <mat-icon [ngClass]="{focused : focused()}" fontSet="material-icons-outlined">{{icon()}}</mat-icon>
+  <input
+    type="{{type()}}"
+    placeholder="{{label()}}"
+    [value]="value"
+    [disabled]="disabled"
+    (input)="updateValue($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+  />
 </div>
 

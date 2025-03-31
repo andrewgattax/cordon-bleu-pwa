@@ -1,10 +1,10 @@
 /* SCSS RGB */
-$primary: rgba(251, 196, 95, 1);
+$primary: rgb(255, 145, 0);
 $secondary: rgba(243, 154, 121, 1);
 $merda: rgba(107, 75, 62, 1);
 $extra: rgba(160, 193, 185, 1);
-$danger: rgb(255, 69, 41);
-$warning: rgb(241, 125, 52);
+$danger: rgb(241, 125, 52);
+$warning: rgb(229, 143, 131);
 $grey: rgb(162, 164, 163);
 
 $horizontal-gradient: linear-gradient(to right, $primary, $secondary);
@@ -19,7 +19,7 @@ $box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 // 🔠 Tipografia (adatta agli smartphone)
 $font-family: 'Inter', sans-serif;
-$font-size-small: 14px;
+$font-size-small: 12px;
 $font-size-medium: 16px;
 $font-size-large: 18px;
 $font-size-title: 22px;

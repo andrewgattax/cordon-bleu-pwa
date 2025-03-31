@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="main">
+    <h1>Login</h1>
+    <h3>Entra nel tuo account.</h3>
+    <form [formGroup]="loginForm">
+      <app-input-text
+        formControlName="username"
+        name="username"
+        type="email"
+        icon="person"
+        label="Username"
+        [invalid]="loginForm.controls.username.invalid && loginForm.controls.username.touched"
+      />
+      <app-input-text
+        formControlName="password"
+        name="password"
+        icon="lock"
+        type="password"
+        label="Password"
+        [invalid]="loginForm.controls.password.invalid && loginForm.controls.password.touched "
+      />
+    </form>
+    <div class="button">
+      @if (errorMessage()) {
+        <div class="error-message">
+          <p>{{ errorMessage() }}</p>
+        </div>
+      }
+      <div style="width: 50%">
+        <app-primary-button text="Entra" (clickEvent)="onSubmit()"></app-primary-button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

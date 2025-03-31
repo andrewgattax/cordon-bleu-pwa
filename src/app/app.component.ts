@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 
 import {RouterOutlet} from '@angular/router';
 import {ThemeService} from './core/services/theme.service';
-import {LoginComponent} from './components/login/login.component';
 
 
 @Component({
@@ -11,7 +10,6 @@ import {LoginComponent} from './components/login/login.component';
   templateUrl: './app.component.html',
   imports: [
     RouterOutlet,
-    LoginComponent
   ],
   styleUrls: ['./app.component.scss']
 })

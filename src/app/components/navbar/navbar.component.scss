@@ -1,0 +1,62 @@
+@use "../../../styles/theme";
+
+* {
+  color: black;
+}
+
+.navbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+mat-icon {
+  font-size: 30px;
+  color: theme.$secondary;
+  overflow: visible;
+}
+
+.circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  transform: translate(-50%, 0%);
+  bottom: 10px;
+}
+
+.inner-circle{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: theme.$horizontal-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled{
+  background: rgba(228,183,132,0.54);
+}
+
+.inner-circle mat-icon{
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-weight: 600;
+  color: theme.$secondary;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: theme.$secondary;
+}

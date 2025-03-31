@@ -1,0 +1,41 @@
+@use "../../styles/theme";
+
+.container {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main {
+  margin-bottom: 100px;
+  width: 80%;
+}
+
+h3{
+  margin-block-end: 20px;
+}
+
+.button{
+  margin: 25px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.error{
+  padding: 10px;
+  color: #ef6020;
+  font-size: theme.$font-size-small;
+  font-weight: bold;
+}
+
+.error-message{
+  margin: 0 2em 0 0;
+  padding: 10px 20px;
+  background: theme.$horizontal-gradient;
+  color: white;
+  border-radius: 5px;
+  font-size: theme.$font-size-small;
+  font-weight: bold;
+}

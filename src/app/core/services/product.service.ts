@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
-import { Observable } from 'rxjs';
+import {map, Observable} from 'rxjs';
 import { Product } from '../models/product.model';
 
 @Injectable({
@@ -11,6 +11,26 @@ export class ProductService {
 
   getAllProducts(): Observable<Product[]> {
     return this.apiService.get<Product[]>('/api/products');
+  }
+
+  // getTotalAvailability(): number {
+  //   let totalAvailability = 0;
+  //   this.getAllProducts().subscribe({
+  //     next: (response) => {
+  //       console.log(response);
+  //       response.forEach((product) => {
+  //         totalAvailability += product.quantity;
+  //       });
+  //       console.log(totalAvailability);
+  //     }
+  //   })
+  //   return totalAvailability;
+  // }
+
+  getTotalAvailability(): Observable<number> {
+    return this.getAllProducts().pipe(
+      map((products) => products.reduce((total, product) => total + product.quantity, 0))
+    );
   }
 
   getProductById(id: number): Observable<Product> {
