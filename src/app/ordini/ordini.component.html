@@ -1,1 +1,45 @@
-<p>ordini works!</p>
+@if (orders.length > 0) {
+  <div class="container">
+    <h1>I miei ordini</h1>
+    <div class="orders-container">
+      @for (order of orders; track $index) {
+        <div class="order">
+          <div class="info">
+            <p class="main">
+              Ordine #{{ order.id }}
+            </p>
+            <p class="data">
+              {{ order.orderDate | date: 'dd/MM/yyyy' }}
+            </p>
+          </div>
+          <div class="status">
+            <p class="main">
+              Stato
+            </p>
+            <p class="stato">
+              @if (order.delivered) {
+                <span class="consegnato">CONSEGNATO</span>
+
+              } @else if (order.paid) {
+                <span class="pagato">PAGATO</span>
+              } @else {
+                <span class="nonpagato">NON PAGATO</span>
+              }
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="empty">
+    <h1>Non ci sono ordini qui.</h1>
+    <div style="width: 50%">
+      <a routerLink="/ordina">
+        <app-primary-button text="Ordina ora"></app-primary-button>
+      </a>
+    </div>
+  </div>
+}
+
+<app-navbar [home]="false"/>

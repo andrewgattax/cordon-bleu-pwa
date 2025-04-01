@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Quanti ne vuoi?</h1>
+  <h3>Dai che ci arrivi clicca a destra</h3>
+  <div class="cordons">
+    <div class="cordon" (click)="decrement()">
+      <img src="assets/logo.png" alt="cordon" />
+      <h2 class="glowing-text-secondary">x{{disponibility}}</h2>
+    </div>
+    <mat-icon>arrow_forward_ios</mat-icon>
+    <div class="cordon" (click)="increment()">
+      <img src="assets/logo.png" alt="cordon" />
+      <h2 class="glowing-text-secondary">x{{quantity}}</h2>
+    </div>
+  </div>
+  <div class="buttons">
+  </div>
+  <div style="width: 50%">
+    <app-primary-button (clickEvent)="placeOrder()" text="Ordina ora" [disabled]="quantity == 0"></app-primary-button>
+  </div>
+</div>
+<app-navbar [home]="false"></app-navbar>

@@ -1,0 +1,62 @@
+@use "../../styles/theme";
+
+.container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: .2em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+}
+
+h3{
+  font-size: 1em;
+}
+
+mat-icon{
+  color: theme.$primary;
+  font-size: 2rem;
+  overflow: visible;
+  margin-top: -1.2em;
+}
+
+.cordons{
+  margin: .2em 0;
+  flex: 1;
+  display: flex;
+  width: 90%;
+  gap: 0rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  justify-self: center;
+  margin: 20px 0;
+}
+
+.cordon{
+  flex: 1; /* Dimensione iniziale */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+}
+
+.cordon img{
+  margin: -20px 0;
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+
+.cordon h2{
+  text-align: center;
+}
+
+

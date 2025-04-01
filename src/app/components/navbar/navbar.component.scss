@@ -17,6 +17,23 @@ mat-icon {
   overflow: visible;
 }
 
+svg{
+  width: 100%;
+  height: auto;
+  max-width: 50px;
+  fill: white;
+  overflow: visible;
+}
+
+.circle a{
+  display: contents;
+}
+
+.hrefdisable{
+  pointer-events: none;
+  cursor: default;
+}
+
 .circle{
   width: 100px;
   height: 100px;
@@ -28,6 +45,15 @@ mat-icon {
   position: fixed;
   transform: translate(-50%, 0%);
   bottom: 10px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
 }
 
 .inner-circle{

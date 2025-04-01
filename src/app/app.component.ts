@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 import {RouterOutlet} from '@angular/router';
 import {ThemeService} from './core/services/theme.service';
+import {MatIconRegistry} from '@angular/material/icon';
+import {DomSanitizer} from '@angular/platform-browser';
 
 
 @Component({
@@ -14,7 +16,12 @@ import {ThemeService} from './core/services/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private themeService: ThemeService) {}
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private themeService: ThemeService) {
+    iconRegistry.addSvgIcon(
+      'shop_velocissimo',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/shop.svg')
+    );
+  }
 
   ngOnInit() {
     this.themeService.activeTheme$.subscribe((theme: string) => {

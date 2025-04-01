@@ -9,4 +9,9 @@ button{
   font-weight: 700;
   font-size: theme.$font-size-medium;
   border: none;
+  transition: all ease-in-out .3s;
+}
+
+.disabled{
+  background: rgba(228,183,132,0.54);
 }

@@ -5,6 +5,7 @@ import {NotFoundComponent} from './notfound/not-found.component';
 import {OrdiniComponent} from './ordini/ordini.component';
 import {AuthGuard} from './core/guards/auth.guard';
 import {LoggedGuard} from './core/guards/logged.guard';
+import {NewOrderComponent} from './new-order/new-order.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,11 @@ export const routes: Routes = [
   {
     'path': 'ordini',
     component: OrdiniComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    'path': 'ordina',
+    component: NewOrderComponent,
     canActivate: [AuthGuard]
   },
   {

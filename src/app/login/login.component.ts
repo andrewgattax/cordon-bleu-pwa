@@ -14,7 +14,7 @@ import {AuthRequest} from '../core/models/auth.model';
 import {UserService} from '../core/services/user.service';
 import {User} from '../core/models/user.model';
 import {Router} from '@angular/router';
-import {CreditsComponent} from '../components/credits/credits.component';
+
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,6 @@ import {CreditsComponent} from '../components/credits/credits.component';
     PrimaryButtonComponent,
     FormsModule,
     ReactiveFormsModule,
-    CreditsComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

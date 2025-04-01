@@ -19,6 +19,7 @@ export class NavbarComponent {
   authService = inject(AuthService);
   router = inject(Router);
   available = input(false);
+  home = input(true);
 
   logout() {
     this.authService.logout();
