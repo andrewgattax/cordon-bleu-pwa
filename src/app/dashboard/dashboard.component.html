@@ -1,0 +1,26 @@
+<!--<app-credits></app-credits>-->
+<div class="container">
+
+  @if (quantita == 0 && contentLoaded) {
+    <div class="ready disabled">
+      <div class="quantita glowing-text-secondary">
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <h2>x<span>{{ contentLoaded ? quantita : "XX" }}</span></h2>
+      </div>
+    </div>
+  } @else {
+    <div class="ready">
+      <div class="quantita glowing-text-secondary">
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <h2>x<span>{{ contentLoaded ? quantita : "XX" }}</span></h2>
+      </div>
+    </div>
+  }
+  @if (ordiniInSospeso == 1) {
+    <h2>C'è <span class="glowing-text-secondary">un</span> ordine in sospeso</h2>
+  } @else {
+    <h2>Ci sono <span class="glowing-text-secondary">{{ contentLoaded ? ordiniInSospeso : "X" }}</span> nuovi ordini</h2>
+  }
+</div>
+
+<app-navbar [admin]="true" [available]="quantita != 0 && contentLoaded" class="bottom-nav"/>

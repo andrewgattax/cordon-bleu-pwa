@@ -20,6 +20,7 @@ export class NavbarComponent {
   router = inject(Router);
   available = input(false);
   home = input(true);
+  admin = input(false);
 
   logout() {
     this.authService.logout();

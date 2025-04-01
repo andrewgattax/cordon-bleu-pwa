@@ -1,0 +1,116 @@
+@use "../../styles/theme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+}
+
+.cozzo-container{
+  flex: 1;
+  display: flex;
+  width: 90%;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+}
+
+.cozzo-container div{
+  display: inline-flex;
+}
+
+
+
+h3{
+  text-align: start;
+  width: 100%;
+}
+
+h3 mat-icon{
+  transform: translateY(20%);
+}
+
+.logo{
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.ready{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+.ready h1{
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.ready h2{
+  font-weight: 600;
+  color: theme.$secondary;
+}
+
+.ready h3{
+  text-align: center;
+  font-size: 14px;
+  color: theme.$grey;
+}
+
+.ready .button{
+  width: 60%;
+}
+
+.ready .quantita{
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.ready span{
+  font-weight: 800;
+  font-size: 2rem;
+  color: theme.$secondary;
+}
+
+.disabled{
+  filter: grayscale(100%);
+  box-shadow: 0 0 0 0;
+  transition: all ease-in-out .3s;
+}
+
+.cozzo{
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+h2{
+  color: theme.$dark-grey;
+}

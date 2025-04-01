@@ -6,6 +6,8 @@ import {OrdiniComponent} from './ordini/ordini.component';
 import {AuthGuard} from './core/guards/auth.guard';
 import {LoggedGuard} from './core/guards/logged.guard';
 import {NewOrderComponent} from './new-order/new-order.component';
+import {AdminGuard} from './core/guards/admin.guard';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +19,11 @@ export const routes: Routes = [
     'path': 'home',
     component: HomepageComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    'path': "dashboard",
+    component: DashboardComponent,
+    canActivate: [AdminGuard]
   },
   {
     'path': 'login',
