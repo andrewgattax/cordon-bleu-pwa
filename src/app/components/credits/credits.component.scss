@@ -1,0 +1,15 @@
+@use "../../../styles/theme";
+
+p{
+  margin: 0;
+  font-weight: 500;
+  color: theme.$extra;
+}
+
+h3{
+  margin: 0;
+  color: theme.$extra;
+  //color: theme.$grey;
+  //font-size: 14px;
+}
+

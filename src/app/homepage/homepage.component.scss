@@ -57,6 +57,7 @@ h3 mat-icon{
   border-radius: 20px;
 }
 
+
 .ready{
   width: 90%;
   display: flex;
@@ -65,9 +66,20 @@ h3 mat-icon{
   justify-self: center;
 }
 
+.ready h1{
+  font-weight: 800;
+  font-size: 3rem;
+}
+
 .ready h2{
   font-weight: 600;
   color: theme.$secondary;
+}
+
+.ready h3{
+  text-align: center;
+  font-size: 14px;
+  color: theme.$grey;
 }
 
 .ready .button{

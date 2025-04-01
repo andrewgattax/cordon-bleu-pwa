@@ -59,4 +59,8 @@ mat-icon{
   text-align: center;
 }
 
+.disabled{
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
 

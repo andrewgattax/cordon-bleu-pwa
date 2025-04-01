@@ -1,7 +1,20 @@
 <div class="container">
   <div class="main">
-    <h1>Login</h1>
-    <h3>Entra nel tuo account.</h3>
+    <div class="hero">
+      <div class="logo">
+        <img src="assets/logo.png" alt="logo" />
+        <div class="col">
+          <h1 class="glowing-text-secondary">CordonBleu</h1>
+          <h3>Ordina quelli che vuoi.</h3>
+        </div>
+        </div>
+
+<!--      <div class="title">-->
+<!--        <h1>Login</h1>-->
+<!--        <h3>Entra nel tuo account.</h3>-->
+<!--      </div>-->
+    </div>
+<!--    <h3>Entra nel tuo account.</h3>-->
     <form [formGroup]="loginForm">
       <app-input-text
         formControlName="username"

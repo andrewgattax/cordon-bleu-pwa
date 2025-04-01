@@ -58,10 +58,22 @@
   gap: 0px;
 }
 
-.status .main{
-  margin-top: 5px;
+.status img{
+  width: 40px;
+  height: auto;
+  margin: -10px 0
+}
+
+.status p{
+  font-weight: bold;
   font-size: 18px;
-  font-weight: 600;
+}
+
+.quantita{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
 }
 
 .stato span{

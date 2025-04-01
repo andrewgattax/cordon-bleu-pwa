@@ -6,13 +6,15 @@ import {NavbarComponent} from '../components/navbar/navbar.component';
 import {OrderService} from '../core/services/order.service';
 import {Order} from '../core/models/order.model';
 import {Router} from '@angular/router';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-new-order',
   imports: [
     MatIcon,
     PrimaryButtonComponent,
-    NavbarComponent
+    NavbarComponent,
+    NgClass
   ],
   templateUrl: './new-order.component.html',
   styleUrl: './new-order.component.scss'
@@ -23,12 +25,14 @@ export class NewOrderComponent {
   productService = inject(ProductService);
   orderService = inject(OrderService);
   router = inject(Router);
+  isLoaded: boolean = false;
 
   ngOnInit(): void {
     this.quantity = 0;
     this.productService.getTotalAvailability().subscribe({
       next: data => {
         this.disponibility = data;
+        this.isLoaded = true;
       }
     })
   }
