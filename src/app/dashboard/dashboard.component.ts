@@ -9,10 +9,7 @@ import {ProductService} from '../core/services/product.service';
 @Component({
   selector: 'app-dashboard',
     imports: [
-        MatIcon,
         NavbarComponent,
-        PrimaryButtonComponent,
-        RouterLink
     ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
@@ -25,13 +22,16 @@ export class DashboardComponent {
   ordiniInSospeso = 0;
   quantitaLoaded = false;
   ordiniLoaded = false;
-  contentLoaded = this.quantitaLoaded && this.ordiniLoaded;
+  contentLoaded = false
 
   ngOnInit(){
     this.productService.getTotalAvailability().subscribe({
       next: value => {
         this.quantita = value;
         this.quantitaLoaded = true;
+        if(this.ordiniLoaded) {
+          this.contentLoaded = true;
+        }
       }
     })
     this.orderService.getAllOrders().subscribe({
@@ -42,6 +42,10 @@ export class DashboardComponent {
           }
         }
         this.ordiniLoaded = true;
+        if(this.quantitaLoaded) {
+          this.contentLoaded = true;
+        }
+
       }
     })
   }

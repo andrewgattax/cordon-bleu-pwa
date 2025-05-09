@@ -8,6 +8,8 @@ import {LoggedGuard} from './core/guards/logged.guard';
 import {NewOrderComponent} from './new-order/new-order.component';
 import {AdminGuard} from './core/guards/admin.guard';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {AggiungiProdottoComponent} from './aggiungi-prodotto/aggiungi-prodotto.component';
+import {AdminRedirectGuard} from './core/guards/adminRedirect.guard';
 
 export const routes: Routes = [
   {
@@ -20,11 +22,16 @@ export const routes: Routes = [
     component: HomepageComponent,
     canActivate: [AuthGuard]
   },
-  {
-    'path': "dashboard",
-    component: DashboardComponent,
-    canActivate: [AdminGuard]
-  },
+  // {
+  //   'path': "dashboard",
+  //   component: DashboardComponent,
+  //   canActivate: [AdminGuard]
+  // },
+  // {
+  //   'path': "aggiungi-prodotto",
+  //   component: AggiungiProdottoComponent,
+  //   canActivate: [AdminGuard]
+  // },
   {
     'path': 'login',
     component: LoginComponent,

@@ -45,6 +45,15 @@ export class ProductService {
     return this.apiService.put<Product, Product>(`/api/products/${id}`, product);
   }
 
+  incrementStock(id: number, quantity: number): void {
+    this.getProductById(id).subscribe({
+      next: value => {
+        value.quantity += quantity
+        this.updateProduct(id, value);
+      }
+    })
+  }
+
   deleteProduct(id: number): Observable<void> {
     return this.apiService.delete<void>(`/api/products/${id}`);
   }
