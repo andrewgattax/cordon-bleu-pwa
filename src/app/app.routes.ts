@@ -6,10 +6,7 @@ import {OrdiniComponent} from './ordini/ordini.component';
 import {AuthGuard} from './core/guards/auth.guard';
 import {LoggedGuard} from './core/guards/logged.guard';
 import {NewOrderComponent} from './new-order/new-order.component';
-import {AdminGuard} from './core/guards/admin.guard';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {AggiungiProdottoComponent} from './aggiungi-prodotto/aggiungi-prodotto.component';
-import {AdminRedirectGuard} from './core/guards/adminRedirect.guard';
+
 
 export const routes: Routes = [
   {
